@@ -2,7 +2,6 @@ package start;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -12,15 +11,18 @@ import javafx.stage.Stage;
  */
 public class Main extends Application{
 
+    static Stage parentStage;
+    static Scene scene;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
+        parentStage = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("/fxmls/main.fxml"));
-        Scene scene = new Scene(root, 640, 640);
+        scene = new Scene(root, 640, 640);
         scene.getStylesheets().add("/styles/mainStyle.css");
-        primaryStage.setResizable(false);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
+        parentStage.setResizable(false);
+        parentStage.setScene(scene);
+        parentStage.show();
     }
 
 
