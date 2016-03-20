@@ -4,9 +4,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:controller="controllers.MainController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
    <children>
-      <Button layoutX="189.0" layoutY="226.0" mnemonicParsing="false" onAction="#touchBtn" text="touch me" />
-      <Label fx:id="label" layoutX="204.0" layoutY="163.0" />
+      <Button layoutX="300.0" layoutY="545.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="99.0" text="GAME" />
+      <Button layoutX="299.0" layoutY="593.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="99.0" text="EXIT" />
    </children>
 </Pane>
