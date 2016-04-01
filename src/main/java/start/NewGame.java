@@ -24,7 +24,7 @@ public class NewGame {
 
     /*Картинки инициализируются тут*/
     private Image backgroundImage = new Image("/images/background.jpg");
-    private Image persImage = new Image("/images/zombiemove/zombie3.png");
+    private Image persImage = new Image("/images/person1.png");
     private Image zombieImage1 = new Image("/images/zombiemove/zombie1.png");
     private Image zombieImage2 = new Image("/images/zombiemove/zombie2.png");
     private Image zombieImage3 = new Image("/images/zombiemove/zombie3.png");
