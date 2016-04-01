@@ -12,6 +12,8 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.util.Duration;
 
+import java.util.ArrayList;
+
 /**
  * Created by 4 on 20.03.2016.
  */
@@ -109,18 +111,44 @@ public class NewGame {
 
     /*думать - исправлять*/
     public void initZombie(){
-        root.getChildren().add(2, zombieImageView1);
+
+        root.getChildren().add(zombieImageView3);
         root.getChildren().get(2).setLayoutX(50);
         root.getChildren().get(2).setLayoutY(50);
 
         zombieMoveTimeLine = new Timeline(new KeyFrame(
-                Duration.millis(25),
+                Duration.millis(200),
                 ae -> move()));
         zombieMoveTimeLine.setCycleCount(Animation.INDEFINITE);
         zombieMoveTimeLine.play();
     }
 
+    int i = 0;
     private void move() {
-        root.getChildren().get(2).setLayoutY(root.getChildren().get(2).getLayoutY() + 1);
+        i++;
+        double x = root.getChildren().get(2).getLayoutX();
+        double y = root.getChildren().get(2).getLayoutY();
+        root.getChildren().remove(2);
+
+        switch (i){
+            case 1:
+                root.getChildren().add(zombieImageView1);
+                root.getChildren().get(2).setLayoutX(x);
+                root.getChildren().get(2).setLayoutY(y);
+                break;
+            case 2:
+                root.getChildren().add(zombieImageView2);
+                root.getChildren().get(2).setLayoutX(x);
+                root.getChildren().get(2).setLayoutY(y);
+                break;
+            case 3:
+                i = 0;
+                root.getChildren().add(zombieImageView3);
+                root.getChildren().get(2).setLayoutX(x);
+                root.getChildren().get(2).setLayoutY(y);
+                break;
+        }
+
+        root.getChildren().get(2).setLayoutY(root.getChildren().get(2).getLayoutY() + 5);
     }
 }
