@@ -28,6 +28,7 @@ public class NewGame {
     private Image zombieImage1 = new Image("/images/zombiemove/zombie1.png");
     private Image zombieImage2 = new Image("/images/zombiemove/zombie2.png");
     private Image zombieImage3 = new Image("/images/zombiemove/zombie3.png");
+    private Image patronImage = new Image("/images/pantron.png");
 
     /*Определяем ImageView на основе Image*/
     private ImageView backgroundImageView = new ImageView(backgroundImage);
@@ -35,6 +36,7 @@ public class NewGame {
     private ImageView zombieImageView1 = new ImageView(zombieImage1);
     private ImageView zombieImageView2 = new ImageView(zombieImage2);
     private ImageView zombieImageView3 = new ImageView(zombieImage3);
+    private ImageView patronImageView = new ImageView(patronImage);
 
     private Timeline zombieMoveTimeLine, timelineLeftMove, timelineRightMove;
 
